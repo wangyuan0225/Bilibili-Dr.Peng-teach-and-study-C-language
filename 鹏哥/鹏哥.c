@@ -1,15 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<string.h>
-
 int main()
 {
-	int a = 1;
-	int b = a << 1;
-	printf("%d\n", b);
+	
 	return 0;
 
 }
+
+
+//int main()
+//{
+//	int a = 1;
+//	int b = a << 3;
+//	printf("%d\n", b);
+//	return 0;
+//
+//}
 
 
 //int main()
