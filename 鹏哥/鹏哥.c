@@ -3,10 +3,58 @@
 #include<string.h>
 int main()
 {
-	
+	int arr[10] = { 0 };
+	printf("%d\n", sizeof(arr)/sizeof(arr[0]));
+	printf("%d\n", sizeof(int));
 	return 0;
-
 }
+
+
+//int main()
+//{
+//	//int a = 10;
+//	//int b = 20;
+//	//a + b;
+//	//int a = 0;
+//	int a = -2;
+//	int b = -a;
+//	printf("%d\n", b);
+//	printf("%d\n", a);
+//	printf("%d\n", !a);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 10;
+//	a = 20;
+//	a += 10;
+//	printf("%d", a);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 3;
+//	//011
+//	int b = 5;
+//	//101
+//	int c = a & b;
+//	//001(与门，类似与乘法，两个都是真才可)
+//	int d = a | b;
+//	//111(或门，有真即可)
+//	int e = a ^ b;
+//	//110（异或门，相异为1，相同为0）
+//	printf("%d\n", c);
+//	printf("%d\n", d);
+//	printf("%d\n", e);
+//
+//	
+//	return 0;
+//
+//}
 
 
 //int main()
@@ -14,6 +62,8 @@ int main()
 //	int a = 1;
 //	int b = a << 3;
 //	printf("%d\n", b);
+//	printf("%d\n", a);
+//
 //	return 0;
 //
 //}
