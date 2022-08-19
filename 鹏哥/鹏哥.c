@@ -1,28 +1,50 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<string.h>
-
-int Max(int x, int y)
-{
-	if (x > y)
-		return x;
-	else
-		return y;
-}
-
-#define MAX(X,Y) (X>Y?X:Y)
-
 int main()
 {
-	int a = 10;
-	int b = 20;
-	int max = Max(a, b);
-	printf("%d\n", max);
-
-	max = MAX(a, b);
-	printf("%d\n", max);
+	char ch = 'w';
+	char* pc = &ch;
+	printf("%d\n", sizeof(pc));
+	*pc = 'a';
+	printf("%c\n", ch);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
+//	printf("%p\n", &a);
+//	printf("%p\n", p);
+//	*p = 20;
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+
+//int Max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//
+//#define MAX(X,Y) (X>Y?X:Y)
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int max = Max(a, b);
+//	printf("%d\n", max);
+//
+//	max = MAX(a, b);
+//	printf("%d\n", max);
+//	return 0;
+//}
 
 
 //#define Max 100
