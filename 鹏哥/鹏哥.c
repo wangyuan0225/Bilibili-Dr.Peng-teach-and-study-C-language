@@ -1,22 +1,127 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<string.h>
+
+int Max(int x, int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+
+#define MAX(X,Y) (X>Y?X:Y)
+
 int main()
 {
-	//int arr[10] = { 5,6,7,8,9 };
-	//printf("%d\n", arr[4]);
 	int a = 10;
 	int b = 20;
-	int sum = Add(a, b);
-	printf("%d\n", sum);
+	int max = Max(a, b);
+	printf("%d\n", max);
+
+	max = MAX(a, b);
+	printf("%d\n", max);
 	return 0;
 }
-int Add(int x, int y)
-{
-	int z = 0;
-	z = x + y;
-	return z;
-}
+
+
+//#define Max 100
+//int main()
+//{
+//	int a = Max;
+//	return 0;
+//}
+
+
+//extern int Add(int, int);
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum =Add(a, b);
+//	printf("sum=%d\n", sum);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	extern int g_val;
+//	printf("%d\n", g_val);
+//	return 0;
+//}
+
+
+//void test()
+//{
+//	static int a = 1;
+//	a++;
+//	printf("a=%d\n", a);
+//}
+//int main() 
+// {
+//	int i = 0;
+//	while (i < 5)
+//	{
+//		test();
+//		i++;
+//	}
+//	return 0;
+//}
+
+
+//int a = 1;
+//void test()
+//{
+//	printf("a=%d\n", a);
+//}
+//int main()
+//{
+//	int i = 0;
+//	while (i < 5)
+//	{
+//		test();
+//		i++;
+//		a++;
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	typedef unsigned int u_int;
+//	u_int num2 = 20;
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	unsigned int a = 10;
+//	a = -2;
+//	printf("%u\n", a);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	//int arr[10] = { 5,6,7,8,9 };
+//	//printf("%d\n", arr[4]);
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
+//int Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+
 
 //int main()
 //{
