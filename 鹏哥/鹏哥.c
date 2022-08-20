@@ -1,15 +1,69 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<string.h>
+struct Book
+{
+	char name[100];
+	short price;
+};
+
 int main()
 {
-	char ch = 'w';
-	char* pc = &ch;
-	printf("%d\n", sizeof(pc));
-	*pc = 'a';
-	printf("%c\n", ch);
+	struct Book b1 = { "c语言程序设计",55 };
+	struct Book* pb = &b1;
+	strcpy(b1.name, "C++");
+	//b1.name = "C++";
+	b1.price = 15;
+	printf("%s\n", pb->name);
+	printf("%d\n", pb->price);
+	printf("%s\n", (*pb).name);
+	printf("%d\n", (*pb).price);
+	//printf("书名:%s\n", b1.name);
+	//printf("价格:%d元\n", b1.price);
+	//b1.price = 15;
+	//printf("修改后的价格：%d\n", b1.price);
+
 	return 0;
 }
+
+
+//int main()
+//{
+//	printf("%d\n", sizeof(char*));
+//	printf("%d\n", sizeof(short*));
+//	printf("%d\n", sizeof(int*));
+//	printf("%d\n", sizeof(double*));
+//
+//	//double d = 3.14;
+//	//double* pd = &d;
+//	//printf("%d\n", sizeof(pd));
+//	//*pd = 5.5;
+//	//printf("%lf\n", d);
+//	//printf("%lf\n", *pd);
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 10;
+//	printf("%p\n", &a);
+//	int* p = &a;
+//	printf("%p\n", p);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char ch = 'w';
+//	char* pc = &ch;
+//	printf("%d\n", sizeof(pc));
+//	*pc = 'a';
+//	printf("%c\n", ch);
+//	return 0;
+//}
 
 
 //int main()
