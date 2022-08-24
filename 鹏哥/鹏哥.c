@@ -3,15 +3,64 @@
 #include<string.h>
 int main()
 {
-	int ch;
-	while ((ch = getchar()) != EOF)
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	for (i = 0; i < 10; i++)
 	{
-		if (ch < '0' || ch>'9')
-			continue;
-		putchar(ch);
+		printf("%d", arr[i]);
 	}
 	return 0;
 }
+
+
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (5==i)
+//			printf("haha\n");
+//		printf("hehe\n");
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i = 0;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		if (5 == i)
+//			continue;
+//		printf("%d ", i);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		i++;
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int ch;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
 
 
 //int main()
@@ -195,11 +244,8 @@ int main()
 //	int num = 1;
 //	while (num <= 100)
 //	{
-//		if (num < 100)
-//		{
-//			printf("%d ", num);
-//			num+=2;
-//		}
+//	    printf("%d ", num);
+//	    num+=2;
 //	}
 //	return 0;
 //}
