@@ -3,16 +3,48 @@
 #include<string.h>
 int main()
 {
-	int ch = 0;
+	int ch;
 	while ((ch = getchar()) != EOF)
 	{
+		if (ch < '0' || ch>'9')
+			continue;
 		putchar(ch);
 	}
-	//int ch = getchar();
-	//putchar(ch);
-	//printf("%c\n", ch);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int ret = 0;
+//	int ch; 
+//	char password[20] = { 0 };
+//	printf("请输入密码:>");
+//	scanf("%s", password);
+//	while ((ch = getchar()) != '\n')
+//	{
+//		;
+//	}
+//	printf("请确认(Y/N):>");
+//	ret = getchar();
+//	if (ret == 'Y')
+//	{
+//		printf("确认成功\n");
+//	}
+//	else
+//	{
+//		printf("放弃确认\n");
+//	}
+//	//int ch = 0;
+//	//while ((ch = getchar()) != EOF)
+//	//{
+//	//	putchar(ch);
+//	//}
+//	//int ch = getchar();
+//	//putchar(ch);
+//	//printf("%c\n", ch);
+//	return 0;
+//}
 
 
 //int main()
