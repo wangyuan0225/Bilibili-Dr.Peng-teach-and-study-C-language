@@ -7,28 +7,55 @@
 
 int main()
 {
-	
-	return 0;
-}
-
-
-int main()
-{
-	int a = 0, b = 0;
-	for (a = 1, b = 1; a <= 100; a++)
+	int i = 0;
+	double sum = 0.0;
+	for (i = 1; i <= 100; i++)
 	{
-		if (b >= 20)
-			break;
-		if (b % 3 == 1)
-		{
-			b += 3;
-			continue;
-
-		}b -= 5;
+		sum += 1.0 / i;
 	}
-	printf("%d\n", a);
+	printf("%lf\n", sum);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 10 == 9)
+//		{
+//			count++;
+//		}
+//		if (i / 10 == 9)
+//		{
+//			count++;
+//		}
+//	}
+//	printf("%d\n", count);
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 0, b = 0;
+//	for (a = 1, b = 1; a <= 100; a++)
+//	{
+//		if (b >= 20)
+//			break;
+//		if (b % 3 == 1)
+//		{
+//			b += 3;
+//			continue;
+//		}
+//		b -= 5;
+//	}
+//	printf("%d\n", a);
+//	return 0;
+//}
 
 
 //int main()
