@@ -5,22 +5,65 @@
 #include<stdlib.h>
 #include<math.h>
 
-int main()
+void game()
 {
-	int i = 0;
-	for(i=1;i<=9;i++)
-	{
-		int j = 1;
-		for (j = 1; j <= i; j++)
-		{
-			printf("%d*%d=%-2d ", i, j, i * j);
+	int ret = 0;
+	srand();
+	ret = rand();
+	printf("%d\n", ret);
 
-		}
-		printf("\n");
-			
-	}
-	return 0;
 }
+
+void menu()
+{
+	printf("********************************\n");
+	printf("****    1.play    0.exit    ****\n");
+	printf("********************************\n");
+}
+
+int main()
+
+{
+	int input = 0;
+	do
+	{
+		menu();
+		printf("请选择>:");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏\n");
+			break;
+		default:
+			printf("选择错误\n");
+			break;
+		}
+	} while (input);
+	return 0;
+
+}
+
+
+//int main()
+//{
+//	int i = 0;
+//	for(i=1;i<=9;i++)
+//	{
+//		int j = 1;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%-2d ", i, j, i * j);
+//
+//		}
+//		printf("\n");
+//			
+//	}
+//	return 0;
+//}
 
 
 //int main()
