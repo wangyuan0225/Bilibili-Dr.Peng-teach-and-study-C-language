@@ -6,21 +6,43 @@
 #include<math.h>
 #include<time.h>
 
-int Add(int x, int y)
-{
-	int z = 0;
-	z = x + y;
-	return z;
 
-}
-int main()
-{
-	int a = 10;
-	int b = 20;
-	int sum = Add(a, b);
-	printf("%d\n", sum);
-	return 0;
-}
+
+
+//int Max(int x, int y)  /* max函数 */
+//{
+//	int z;
+//	if (x > y)
+//		z = x;
+//	else
+//		z = y;
+//	return z;
+//}
+//
+//int main() 
+//{  
+//	int a, b, c;
+//	scanf("%d%d", &a, &b);;/* 输入两个整数 */
+//	c = Max(a, b);/* 调用max函数,求a和b中大数 */
+//	printf("max = %d\n", c);
+//}
+
+
+//int Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
 
 
 //int main()
