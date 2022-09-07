@@ -6,7 +6,13 @@
 #include<math.h>
 #include<time.h>
 
-
+int main()
+{
+	char arr[] = "hello world";
+	memset(arr, '*', 5);
+	printf("%s\n", arr);
+	return 0;
+}
 
 
 //int main()
