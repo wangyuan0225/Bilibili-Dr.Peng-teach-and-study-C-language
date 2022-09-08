@@ -6,13 +6,38 @@
 #include<math.h>
 #include<time.h>
 
+int get_max(int x,int y)
+{
+	if (x > y)
+	{
+		return x;
+	}
+	else
+	{
+		return y;
+	}
+
+} 
+
 int main()
 {
-	char arr[] = "hello world";
-	memset(arr, '*', 5);
-	printf("%s\n", arr);
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b); 
+	int max = get_max(a, b);
+	printf("%d\n", max);
+
 	return 0;
 }
+
+
+//int main()
+//{
+//	char arr[] = "hello world";
+//	memset(arr, '*', 5);
+//	printf("%s\n", arr);
+//	return 0;
+//}
 
 
 //int main()
