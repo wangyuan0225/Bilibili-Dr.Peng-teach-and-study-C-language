@@ -6,29 +6,48 @@
 #include<math.h>
 #include<time.h>
 
-int get_max(int x,int y)
+void Swap(int x, int y)
 {
-	if (x > y)
-	{
-		return x;
-	}
-	else
-	{
-		return y;
-	}
-
-} 
+	int tmp = 0;
+	tmp = x;
+	x = y;
+	y = tmp;
+}
 
 int main()
 {
-	int a = 0;
-	int b = 0;
-	scanf("%d%d", &a, &b); 
-	int max = get_max(a, b);
-	printf("%d\n", max);
+	int a = 10;
+	int b = 20;
+	int tmp = 0;
+	printf("a=%d b=%d\n", a, b);
+	Swap(a, b);
+	printf("a=%d b=%d\n", a, b);
 
 	return 0;
 }
+
+
+//int get_max(int x,int y)
+//{
+//	if (x > y)
+//	{
+//		return x;
+//	}
+//	else
+//	{
+//		return y;
+//	}
+//} 
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d%d", &a, &b); 
+//	int max = get_max(a, b);
+//	printf("%d\n", max);
+//	return 0;
+//}
 
 
 //int main()
