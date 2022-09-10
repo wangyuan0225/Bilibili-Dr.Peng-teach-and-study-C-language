@@ -6,22 +6,46 @@
 #include<math.h>
 #include<time.h>
 
-int main()
+int is_prime(int n)
 {
-	int a = 10;
-	int* pa = &a;
-	*pa = 20;
-	printf("%d\n", *pa);
-	return 0;
+	int j = 0;
+	for (j = 2; j <= sqrt(n); j++)
+	{
+		if (n % j == 0)
+		{
+			return 0;
+		}
+	}
+	return 1;
 }
 
+int main()
+{
+	int i = 0;
+	for (i = 100; i <= 200; i++)
+	{
+		if (is_prime(i) == 1)
+			printf("%d ", i);
+	}
+	return 0;
 
+}
+
+ 
+//不能完成任务
 //void Swap(int x, int y)
 //{
-//	int tmp = 0;
-//	tmp = x;
+//	int tmp = x;;
 //	x = y;
 //	y = tmp;
+//	
+//}
+//
+//void Swap2(int* px, int* py)
+//{
+//	int tmp = *px;
+//	*px = *py;
+//	*py = tmp;
 //}
 //
 //int main()
@@ -30,7 +54,11 @@ int main()
 //	int b = 20;
 //	int tmp = 0;
 //	printf("a=%d b=%d\n", a, b);
-//	Swap(a, b);
+//	//Swap(a, b);
+//	Swap2(&a, &b);
+//	//tmp = a;
+//	//a = b;
+//	//b = tmp;
 //	printf("a=%d b=%d\n", a, b);
 //
 //	return 0;
