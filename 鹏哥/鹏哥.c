@@ -6,12 +6,52 @@
 #include<math.h>
 #include<time.h>
 
-int main()
-{
-	int num = 0;
-	Add();
-	return 0;
-}
+
+////头文件声明
+//#include "add.h"
+////int Add(int, int);//函数声明（有分号）
+//////但是很啰嗦，可以将Add放在前面
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = 0;
+//	sum = Add(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	printf("%d",printf("%d",printf("%d",43)));
+//	return 0;
+//}
+//
+
+
+//int main()
+//{
+//	int len = 0;
+//	len = strlen("abc");
+//	printf("%d\n", len);
+//	printf("%d\n", strlen("abc"));
+//	return 0;
+//}
+
+
+//int Add(int* x)
+//{
+//	(*x)++;
+//}
+//
+//int main()
+//{
+//	int num = 0;
+//	Add(&num);
+//	printf("%d\n", num);
+//	return 0;
+//}
 
 
 //binary_search(int arr[], int k, int sz)

@@ -130,6 +130,9 @@
     <ClCompile Include="add.c" />
     <ClCompile Include="鹏哥.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="add.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
