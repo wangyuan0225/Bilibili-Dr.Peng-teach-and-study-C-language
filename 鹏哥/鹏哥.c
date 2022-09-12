@@ -6,6 +6,31 @@
 #include<math.h>
 #include<time.h>
 
+void print(int n)
+{
+	if (n > 9)
+	{
+		print(n / 10);
+	}
+	printf("%d ", n % 10);
+}
+
+int main()
+{
+	unsigned int num = 0;
+	scanf("%d", &num);
+	print(num);
+	return 0;
+} 
+
+
+//int main()
+//{
+//	printf("hehe\n");
+//	main();
+//	return 0;
+//}
+
 
 ////头文件声明
 //#include "add.h"
