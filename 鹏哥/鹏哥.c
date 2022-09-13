@@ -6,22 +6,57 @@
 #include<math.h>
 #include<time.h>
 
-void print(int n)
+int my_strlen(char* str)
 {
-	if (n > 9)
+	if (*str != '\0')
 	{
-		print(n / 10);
+		return 1 + my_strlen(str + 1);
 	}
-	printf("%d ", n % 10);
+	else
+	{
+		return 0;
+	}
 }
+
+//int my_strlen(char* str)
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
 
 int main()
 {
-	unsigned int num = 0;
-	scanf("%d", &num);
-	print(num);
+	char arr[] = "bit";
+	//int len = strlen(arr);
+	//printf("%d\n", len);
+	int len = my_strlen(arr);
+	printf("len=%d\n", len);
+
 	return 0;
-} 
+}
+
+
+//void print(int n)
+//{
+//	if (n > 9)
+//	{
+//		print(n / 10);
+//	}
+//	printf("%d ", n % 10);
+//}
+//
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%d", &num);
+//	print(num);
+//	return 0;
+//} 
 
 
 //int main()
