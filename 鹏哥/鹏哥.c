@@ -8,10 +8,93 @@
 
 int main()
 {
-	int arr[10];
-	char arr2[5];
+	char arr4[3] = { 'a',98,'c' };
+	char arr5[] = { 'a','b','c' };
+	printf("%s\n", arr4);
+	printf("%s\n", arr5);
 	return 0;
 }
+
+
+
+//int main()
+//{
+//	int y = 2000;
+//	for (y = 2000; y <= 2500; y++)
+//	{
+//		if (y % 4 != 0)
+//		{
+//			printf("%d不是闰年\n",y);
+//		}
+//		if ((y % 4 == 0) || (y % 100 != 0))
+//		{
+//			printf("%d是闰年\n",y);
+//		}
+//		if ((y % 100 == 0) && (y % 400 == 0))
+//		{
+//			printf("%d是闰年\n",y);
+//		}
+//		else
+//			printf("%d不是闰年\n",y);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int sigh = 1;
+//	int sum = 1;
+//	int deno = 2;
+//	double term;
+//	while (deno <= 100)
+//	{
+//		sigh = (-1) * sigh;
+//		term = sigh * (1 / deno);
+//		term = sum + term;
+//		deno++;
+//	}
+//	printf("%lf\n", term);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i = 2;
+//	int t = 1;
+//	for (i = 2; i <= 5; i++)
+//	{
+//		t = t * i;
+//	}
+//	printf("%d\n",t);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int t = 1;
+//	int i = 2;
+//	while (i <= 5)
+//	{
+//		t = t * i;
+//		i++;
+//	}
+//	printf("%d\n", t);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int arr[10] = { 1,2,3 };
+//	char arr2[5] = { 'a','b' };
+//	char arr4[] = "abcdef";
+//	printf("%d\n", sizeof(arr4));
+//	printf("%d\n", strlen(arr4));
+//	return 0;
+//}
 
 
 //void test(int n)
@@ -248,7 +331,7 @@ int main()
 
 //int is_leap_year(int y)
 //{
-//	if ((y % 4==0 && y % 100 != 0) || (y % 400 == 0))
+//	if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
 //		return 1;
 //	else
 //		return 0;
@@ -537,7 +620,7 @@ int main()
 //	int i = 0;
 //	double sum1 = 0;
 //	double sum2 = 0;
-//	
+//
 //	for (i = 1; i <= 100; i++)
 //	{
 //		if (i % 2 == 1)
