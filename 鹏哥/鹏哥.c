@@ -8,12 +8,27 @@
 
 int main()
 {
-	char arr4[3] = { 'a',98,'c' };
-	char arr5[] = { 'a','b','c' };
-	printf("%s\n", arr4);
-	printf("%s\n", arr5);
+	char arr[] = "abcdef";
+
 	return 0;
+
 }
+
+
+//int main()
+//{
+//	char arr1[] = "abc";
+//	char arr2[] = { 'a','b','c' };
+//	printf("%d\n", sizeof(arr1));
+//	printf("%d\n", sizeof(arr2));
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//	char arr4[3] = { 'a',98,'c' };
+//	char arr5[] = { 'a','b','c' };
+//	printf("%s\n", arr4);
+//	printf("%s\n", arr5);
+//	return 0;
+//}
 
 
 
