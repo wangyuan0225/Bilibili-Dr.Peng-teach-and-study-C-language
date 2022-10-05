@@ -8,11 +8,22 @@
 
 int main()
 {
-	int arr[3][4] = { {1,2,3},{4,5} };
-	char ch[5][6];
-
+	int price = 0;
+	printf("               ");
+	scanf("%d", &price);
+	int change = 100 - price;
+	printf("    %d     \n", change);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int arr[3][4] = { {1,2,3},{4,5} };
+//	char ch[5][6];
+//
+//	return 0;
+//}
 
 
 //int main()
