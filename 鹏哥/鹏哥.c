@@ -6,15 +6,24 @@
 #include<math.h>
 #include<time.h>
 
-int main()
+int main(void)
 {
-	int price = 0;
-	printf("               ");
-	scanf("%d", &price);
-	int change = 100 - price;
-	printf("    %d     \n", change);
+	int year;
+	scanf("%d", &year);
+	printf("Hello,year=%d", year);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int price = 0;
+//	printf("               ");
+//	scanf("%d", &price);
+//	int change = 100 - price;
+//	printf("    %d     \n", change);
+//	return 0;
+//}
 
 
 //int main()
