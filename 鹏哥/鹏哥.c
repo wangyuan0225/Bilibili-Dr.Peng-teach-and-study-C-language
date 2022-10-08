@@ -6,13 +6,20 @@
 #include<math.h>
 #include<time.h>
 
-int main(void)
-{
-	int year;
-	scanf("%d", &year);
-	printf("Hello,year=%d", year);
-	return 0;
-}
+//int main()
+//{
+//
+//	return 0;
+//}
+
+
+//int main(void)
+//{
+//	int year;
+//	scanf("%d", &year);
+//	printf("Hello,year=%d", year);
+//	return 0;
+//}
 
 
 //int main()
@@ -26,13 +33,24 @@ int main(void)
 //}
 
 
-//int main()
-//{
-//	int arr[3][4] = { {1,2,3},{4,5} };
-//	char ch[5][6];
-//
-//	return 0;
-//}
+int main()
+{
+	int arr[3][4] = { {1,2,3},{4,5} };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 4; j++)
+		{
+			printf("%d ", arr[i][j]);
+			printf("%p\n", &arr[i][j]);
+		}
+		printf("\n");
+	}
+	//char ch[5][6];
+	//int arr2[2][4] = { { 1,2,3,4 }, { 5,6,7,8 } };
+	return 0;
+}
 
 
 //int main()
