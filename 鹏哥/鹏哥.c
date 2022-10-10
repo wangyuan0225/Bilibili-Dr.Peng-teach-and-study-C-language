@@ -6,9 +6,55 @@
 #include<math.h>
 #include<time.h>
 
+
 //int main()
 //{
-//
+//	int year;
+//	scanf("%d", &year);
+//	printf("Hello,year=%d", year);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a, b, c = 246;
+//	b = (-2) && (-3);
+//	(a = c) && (b = c);
+//	printf("%d %d\n", a, b);
+//	printf("%d", b);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char ch1 = 'A' + '5' - '3';
+//	char ch2 = 'A' + '6' - '3';
+//	printf("%d %c\n", ch1, ch2);
+//	int x = 10;
+//	int y = 3;
+//	printf("%d\n", y = x / y);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	double x = 1;
+//	double y = x + 3 / 2;
+//	printf("%f", y);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char a = 1;
+//	int b = 2;
+//	float c = 3.1;
+//	double d = 3.14;
+//	printf("%c\n", a * b + c + d);
 //	return 0;
 //}
 
@@ -33,24 +79,24 @@
 //}
 
 
-int main()
-{
-	int arr[3][4] = { {1,2,3},{4,5} };
-	int i = 0;
-	for (i = 0; i < 3; i++)
-	{
-		int j = 0;
-		for (j = 0; j < 4; j++)
-		{
-			printf("%d ", arr[i][j]);
-			printf("%p\n", &arr[i][j]);
-		}
-		printf("\n");
-	}
-	//char ch[5][6];
-	//int arr2[2][4] = { { 1,2,3,4 }, { 5,6,7,8 } };
-	return 0;
-}
+//int main()
+//{
+//	int arr[3][4] = { {1,2,3},{4,5} };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//			printf("%p\n", &arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	//char ch[5][6];
+//	//int arr2[2][4] = { { 1,2,3,4 }, { 5,6,7,8 } };
+//	return 0;
+//}
 
 
 //int main()
