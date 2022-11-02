@@ -8,12 +8,267 @@
 
 int main()
 {
-	int a, b, c, d, e, f, g;
-	a = 1;
-	b = 2, c = 3, d = 4, e = 5, f = 6, g = 7;
-	printf("%d\n", a + b + c + d + e + f + g);
+	int num;
+	char str[99];
+	char* pstr = str;
+	int count[26] = {0};
+	while (1)
+	{
+		printf("请输入一个正整数作为总字母数:>");
+		scanf("%d", &num);
+		printf("请输入一串字母");
+		scanf("%s", str);
+		if (strlen(str) == num)
+		{
+			printf("输入正确\n");
+			for (int i = 0; i < num; i++)
+			{
+				switch (*(pstr + i))
+				{
+				case 'a':
+					count[0]++;
+					break;
+				case 'b':
+					count[1]++;
+					break;
+				case 'c':
+					count[2]++;
+					break;
+				case 'd':
+					count[3]++;
+					break;
+				case 'e':
+					count[4]++;
+					break;
+				case 'f':
+					count[5]++;
+					break;
+				case 'g':
+					count[6]++;
+					break;
+				case 'h':
+					count[7]++;
+					break;
+				case 'i':
+					count[8]++;
+					break;
+				case 'j':
+					count[9]++;
+					break;
+				case 'k':
+					count[10]++;
+					break;
+				case 'l':
+					count[11]++;
+					break;
+				case 'm':
+					count[12]++;
+					break;
+				case 'n':
+					count[13]++;
+					break;
+				case 'o':
+					count[14]++;
+					break;
+				case 'p':
+					count[15]++;
+					break;
+				case 'q':
+					count[16]++;
+					break;
+				case 'r':
+					count[17]++;
+					break;
+				case 's':
+					count[18]++;
+					break;
+				case 't':
+					count[19]++;
+					break;
+				case 'u':
+					count[20]++;
+					break;
+				case 'v':
+					count[21]++;
+					break;
+				case 'w':
+					count[22]++;
+					break;
+				case 'x':
+					count[23]++;
+					break;
+				case 'y':
+					count[24]++;
+					break;
+				case 'z':
+					count[25]++;
+					break;
+				default:
+					break;
+				}
+			}
+			for (int i = 0; i < 26; i++)
+			{
+				if (count[i] != 0)
+				{
+					printf("%c:%d ", i + 97, count[i]);
+				}
+			}
+			break;
+		}
+		else
+		{
+			printf("输入错误,请重新输入\n");
+		}
+	}
 	return 0;
 }
+
+
+
+
+//struct studentsFile
+//{
+//	char id[15];
+//	char name[20];
+//	char sex[9];
+//	int age;
+//	char class[100];
+//};
+//
+//int main()
+//{
+//	struct studentsFile students[400];
+//	FILE* fp = fopen("C:\\students.txt", "r");
+//	char students1[999];
+//	int pd = 0;
+//	for (int i = 0; i < 400; i++)
+//	{
+//		fscanf(fp, "%[^,],%[^,],%[^,],%d,%s\n", &students[i].id, &students[i].name, &students[i].sex, &students[i].age, &students[i].class);
+//	}
+//	while (1)
+//	{
+//		printf("i.查询模式1：根据姓名或学号查询学生信息\nii.查询模式2：根据年龄范围查询学生信息\niii.查询模式3：根据班级查询学生信息\n其他:退出查询\n");
+//		printf("请输入查询模式:>");
+//		int mod;
+//		scanf("%d", &mod);
+//		switch (mod)
+//		{
+//		case 1:
+//			printf("样例1： 输入： 张三\n输出： 张三, 2017002871, 男, 17, 大数据1702\n张三, 2015009321, 男, 22, 信计1502\n");
+//			printf("样例2： 输入： 2017009876\n输出： 小路, 2016009876, 男, 20, 大数据1701\n");
+//			printf("请输入姓名或学号:>");
+//			char pf[99];
+//			scanf("%s", pf);
+//			for (int i = 0; i < 401; i++)
+//			{
+//				if ((strcmp(students[i].name, pf) == 0) || (strcmp(students[i].id, pf) == 0))
+//				{
+//					printf("%s %s %s %d %s\n", students[i].id, students[i].name, students[i].sex, students[i].age, students[i].class);
+//					pd = 1;
+//				}
+//			}
+//			if (pd == 0)
+//				printf("查无此人");
+//			printf("------------------------------------------\n");
+//			break;
+//		case 2:
+//			printf("样例1： 输入： 18 20 \n输出： 李四, 2017001765, 女, 18, 软件工程1712\n小路, 2016009876, 男, 20, 大数据1701\n大张伟, 2014002715, 男, 19, 计算机1402\n");
+//			printf("请输入两个数确定年龄范围，要求第一个数小于等于第二个数:>");
+//			int age[2];
+//			scanf("%d%d", &age[0], &age[1]);
+//			if (age[0] > age[1])
+//			{
+//				printf("输入错误");
+//				break;
+//			}
+//			//printf("%d %d", age[0],age[1]);
+//			else
+//			{
+//				for (int i = 0; i < 401; i++)
+//				{
+//					if (students[i].age >= age[0] && students[i].age <= age[1])
+//					{
+//						printf("%s %s %s %d %s\n", students[i].id, students[i].name, students[i].sex, students[i].age, students[i].class);
+//						pd = 1;
+//					}
+//				}
+//				if (pd == 0)
+//					printf("查无此人\n");
+//			}
+//			printf("------------------------------------------\n");
+//			break;
+//		case 3:
+//			printf("样例1： 输入： 大数据1702\n输出： 张三, 2017002871, 男, 17, 大数据1702\n王璐丹, 2017009479, 女, 22, 大数据1702\n");
+//			printf("请输入专业班级:>");
+//			char class[99];
+//			scanf("%s", class);
+//			for (int i = 0; i < 401; i++)
+//			{
+//				if ((strcmp(students[i].class, class) == 0) || (strcmp(students[i].class, class) == 0))
+//				{
+//					printf("%s %s %s %d %s\n", students[i].id, students[i].name, students[i].sex, students[i].age, students[i].class);
+//					pd = 1;
+//				}
+//				
+//			}
+//			if (pd == 0)
+//				printf("查无此人");
+//			printf("------------------------------------------\n");
+//			break;
+//		default:
+//			printf("退出查询");
+//			return 0;
+//		}
+//	}
+//	fclose(fp);
+//	return 0;
+//}
+
+
+//struct Stu
+//{
+//	char name[20];
+//	char id[99];
+//	char sex[9];
+//	int age;
+//	char class[100];
+//};
+//
+//int main()
+//{
+//	int i;
+//	struct Stu stu[5] =
+//	{
+//		{ "王渊","2022001932","男",18,"计算机2201"},
+//		{ "张佑卿","2022001933","男",18,"计算机2201"},
+//		{ "陈昶文","2022001930","男",18,"计算机2201"},
+//		{ "万昭明","022001929","男",18,"计算机2201"},
+//		{ "张明超","2022001934","男",18,"计算机2201"},
+//	};
+//	printf(stu);
+//	struct Stu* p = stu;
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d\n", (p + i)->age);
+//	}
+//	printf("%d\n", p->age);
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("name:%s  id:%s  sex:%s  age:%d  class:%s\n", stu[i].name, stu[i].id, stu[i].sex, stu[i].age, stu[i].class);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a, b, c, d, e, f, g;
+//	a = 1;
+//	b = 2, c = 3, d = 4, e = 5, f = 6, g = 7;
+//	printf("%d\n", a + b + c + d + e + f + g);
+//	return 0;
+//}
 
 
 //int main()
