@@ -8,121 +8,283 @@
 
 int main()
 {
-	int num;
-	char str[99];
-	char* pstr = str;
-	int count[26] = {0};
-	while (1)
+	char sentence[99] = { "0" };
+	char* hanzi[999] = { '0' };
+	int review[99] = { 0 };
+	int j = 1;
+	int k = 2;
+	char* p = sentence;
+	scanf("%s", sentence);
+	char news[99];
+	//printf("%c%c", sentence[0], sentence[1]);
+	int len = strlen(sentence);
+	printf("%d\n", len);
+	hanzi[0] = p;
+	hanzi[1] = p + 1;
+	//printf("%c%c\n", *hanzi[0], *hanzi[1]);
+	for (int i = 0; i < len; i += 2)
 	{
-		printf("请输入一个正整数作为总字母数:>");
-		scanf("%d", &num);
-		printf("请输入一串字母");
-		scanf("%s", str);
-		if (strlen(str) == num)
+		for (; k < len; k += 2)
 		{
-			printf("输入正确\n");
-			for (int i = 0; i < num; i++)
+			if (*p + i == *p + k && *p + i + 1 == *p + k + 1)
 			{
-				switch (*(pstr + i))
-				{
-				case 'a':
-					count[0]++;
-					break;
-				case 'b':
-					count[1]++;
-					break;
-				case 'c':
-					count[2]++;
-					break;
-				case 'd':
-					count[3]++;
-					break;
-				case 'e':
-					count[4]++;
-					break;
-				case 'f':
-					count[5]++;
-					break;
-				case 'g':
-					count[6]++;
-					break;
-				case 'h':
-					count[7]++;
-					break;
-				case 'i':
-					count[8]++;
-					break;
-				case 'j':
-					count[9]++;
-					break;
-				case 'k':
-					count[10]++;
-					break;
-				case 'l':
-					count[11]++;
-					break;
-				case 'm':
-					count[12]++;
-					break;
-				case 'n':
-					count[13]++;
-					break;
-				case 'o':
-					count[14]++;
-					break;
-				case 'p':
-					count[15]++;
-					break;
-				case 'q':
-					count[16]++;
-					break;
-				case 'r':
-					count[17]++;
-					break;
-				case 's':
-					count[18]++;
-					break;
-				case 't':
-					count[19]++;
-					break;
-				case 'u':
-					count[20]++;
-					break;
-				case 'v':
-					count[21]++;
-					break;
-				case 'w':
-					count[22]++;
-					break;
-				case 'x':
-					count[23]++;
-					break;
-				case 'y':
-					count[24]++;
-					break;
-				case 'z':
-					count[25]++;
-					break;
-				default:
-					break;
-				}
+				review[j]++;
 			}
-			for (int i = 0; i < 26; i++)
+			else
 			{
-				if (count[i] != 0)
-				{
-					printf("%c:%d ", i + 97, count[i]);
-				}
+				hanzi[j] = p + i;
+				hanzi[j + 1] = p + i + 1;
 			}
-			break;
 		}
-		else
-		{
-			printf("输入错误,请重新输入\n");
-		}
+		j += 2;
+		k = i + 2;
+	}
+	for (int i = 0; i < len; i += 2)
+	{
+		printf("%c%c:%d", *hanzi[i], *hanzi[i + 1], review[i]);
 	}
 	return 0;
 }
+
+
+//int main()
+//{
+//	int num;
+//	int i = 0;
+//	int j = 0;
+//	char str[99];
+//	char* pstr = str;
+//	int count[26] = { 0 };
+//	while (1)
+//	{
+//		printf("请输入一个正整数作为总字母数:>");
+//		scanf("%d", &num);
+//		printf("请输入一串字母");
+//		scanf("%s", str);
+//		if (strlen(str) == num)
+//		{
+//			printf("输入正确\n");
+//			for (i = 0; i < 26; i++)
+//			{
+//				switch (*(pstr + i))
+//				{
+//				case 'a':
+//					count[0]++;
+//					break;
+//				case 'b':
+//					count[1]++;
+//					break;
+//				case 'c':
+//					count[2]++;
+//					break;
+//				case 'd':
+//					count[3]++;
+//					break;
+//				case 'e':
+//					count[4]++;
+//					break;
+//				case 'f':
+//					count[5]++;
+//					break;
+//				case 'g':
+//					count[6]++;
+//					break;
+//				case 'h':
+//					count[7]++;
+//					break;
+//				case 'i':
+//					count[8]++;
+//					break;
+//				case 'j':
+//					count[9]++;
+//					break;
+//				case 'k':
+//					count[10]++;
+//					break;
+//				case 'l':
+//					count[11]++;
+//					break;
+//				case 'm':
+//					count[12]++;
+//					break;
+//				case 'n':
+//					count[13]++;
+//					break;
+//				case 'o':
+//					count[14]++;
+//					break;
+//				case 'p':
+//					count[15]++;
+//					break;
+//				case 'q':
+//					count[16]++;
+//					break;
+//				case 'r':
+//					count[17]++;
+//					break;
+//				case 's':
+//					count[18]++;
+//					break;
+//				case 't':
+//					count[19]++;
+//					break;
+//				case 'u':
+//					count[20]++;
+//					break;
+//				case 'v':
+//					count[21]++;
+//					break;
+//				case 'w':
+//					count[22]++;
+//					break;
+//				case 'x':
+//					count[23]++;
+//					break;
+//				case 'y':
+//					count[24]++;
+//					break;
+//				case 'z':
+//					count[25]++;
+//					break;
+//				default:
+//					break;
+//				}
+//			}
+//			for (j = 0; j < 26; j++)
+//			{
+//				if (count[j] != 0)
+//				{
+//					printf("%c:%d ", j + 97, count[j]);
+//				}
+//			}
+//			break;
+//		}
+//		else
+//		{
+//			printf("输入错误,请重新输入\n");
+//		}
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int num;
+//	char str[99];
+//	char* pstr = str;
+//	int count[26] = {0};
+//	while (1)
+//	{
+//		printf("请输入一个正整数作为总字母数:>");
+//		scanf("%d", &num);
+//		printf("请输入一串字母");
+//		scanf("%s", str);
+//		if (strlen(str) == num)
+//		{
+//			printf("输入正确\n");
+//			for (int i = 0; i < num; i++)
+//			{
+//				switch (*(pstr + i))
+//				{
+//				case 'a':
+//					count[0]++;
+//					break;
+//				case 'b':
+//					count[1]++;
+//					break;
+//				case 'c':
+//					count[2]++;
+//					break;
+//				case 'd':
+//					count[3]++;
+//					break;
+//				case 'e':
+//					count[4]++;
+//					break;
+//				case 'f':
+//					count[5]++;
+//					break;
+//				case 'g':
+//					count[6]++;
+//					break;
+//				case 'h':
+//					count[7]++;
+//					break;
+//				case 'i':
+//					count[8]++;
+//					break;
+//				case 'j':
+//					count[9]++;
+//					break;
+//				case 'k':
+//					count[10]++;
+//					break;
+//				case 'l':
+//					count[11]++;
+//					break;
+//				case 'm':
+//					count[12]++;
+//					break;
+//				case 'n':
+//					count[13]++;
+//					break;
+//				case 'o':
+//					count[14]++;
+//					break;
+//				case 'p':
+//					count[15]++;
+//					break;
+//				case 'q':
+//					count[16]++;
+//					break;
+//				case 'r':
+//					count[17]++;
+//					break;
+//				case 's':
+//					count[18]++;
+//					break;
+//				case 't':
+//					count[19]++;
+//					break;
+//				case 'u':
+//					count[20]++;
+//					break;
+//				case 'v':
+//					count[21]++;
+//					break;
+//				case 'w':
+//					count[22]++;
+//					break;
+//				case 'x':
+//					count[23]++;
+//					break;
+//				case 'y':
+//					count[24]++;
+//					break;
+//				case 'z':
+//					count[25]++;
+//					break;
+//				default:
+//					break;
+//				}
+//			}
+//			for (int i = 0; i < 26; i++)
+//			{
+//				if (count[i] != 0)
+//				{
+//					printf("%c:%d ", i + 97, count[i]);
+//				}
+//			}
+//			break;
+//		}
+//		else
+//		{
+//			printf("输入错误,请重新输入\n");
+//		}
+//	}
+//	return 0;
+//}
 
 
 
