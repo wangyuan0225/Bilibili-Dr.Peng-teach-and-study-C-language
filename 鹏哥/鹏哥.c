@@ -6,45 +6,74 @@
 #include<math.h>
 #include<time.h>
 
-int main()
+#include<stdio.h>
+main()
 {
-	char sentence[99] = { "0" };
-	char* hanzi[999] = { '0' };
-	int review[99] = { 0 };
-	int j = 1;
-	int k = 2;
-	char* p = sentence;
-	scanf("%s", sentence);
-	char news[99];
-	//printf("%c%c", sentence[0], sentence[1]);
-	int len = strlen(sentence);
-	printf("%d\n", len);
-	hanzi[0] = p;
-	hanzi[1] = p + 1;
-	//printf("%c%c\n", *hanzi[0], *hanzi[1]);
-	for (int i = 0; i < len; i += 2)
+	int i, n;
+	char ci;
+	for (i = 1;; i++)
 	{
-		for (; k < len; k += 2)
+		scanf("%c", &ci);
+		if (ci == 67 || ci == 99 || ci == 107 || ci == 75 || ci == 74 || ci == 106)
 		{
-			if (*p + i == *p + k && *p + i + 1 == *p + k + 1)
+			switch (ci)
 			{
-				review[j]++;
-			}
-			else
-			{
-				hanzi[j] = p + i;
-				hanzi[j + 1] = p + i + 1;
+			case 'K':;
+			case 'k':printf("KOREA WORLD CUP\n"); break;
+			case 'C':;
+			case 'c':printf("BEIJING OLYMPIC GAMES\n"); break;
+			case 'j':;
+			case 'J':printf("JAPAN WORLD CUP\n"); break;
 			}
 		}
-		j += 2;
-		k = i + 2;
+		else if (ci == '\n')
+			break;
+		else 
+			printf("%c\n", ci);
 	}
-	for (int i = 0; i < len; i += 2)
-	{
-		printf("%c%c:%d", *hanzi[i], *hanzi[i + 1], review[i]);
-	}
-	return 0;
 }
+
+
+
+//int main()
+//{
+//	char sentence[99] = { "0" };
+//	char* hanzi[999] = { '0' };
+//	int review[99] = { 0 };
+//	int j = 1;
+//	int k = 2;
+//	char* p = sentence;
+//	scanf("%s", sentence);
+//	char news[99];
+//	//printf("%c%c", sentence[0], sentence[1]);
+//	int len = strlen(sentence);
+//	printf("%d\n", len);
+//	hanzi[0] = p;
+//	hanzi[1] = p + 1;
+//	//printf("%c%c\n", *hanzi[0], *hanzi[1]);
+//	for (int i = 0; i < len; i += 2)
+//	{
+//		for (; k < len; k += 2)
+//		{
+//			if (*p + i == *p + k && *p + i + 1 == *p + k + 1)
+//			{
+//				review[j]++;
+//			}
+//			else
+//			{
+//				hanzi[j] = p + i;
+//				hanzi[j + 1] = p + i + 1;
+//			}
+//		}
+//		j += 2;
+//		k = i + 2;
+//	}
+//	for (int i = 0; i < len; i += 2)
+//	{
+//		printf("%c%c:%d", *hanzi[i], *hanzi[i + 1], review[i]);
+//	}
+//	return 0;
+//}
 
 
 //int main()
