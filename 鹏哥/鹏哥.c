@@ -6,33 +6,42 @@
 #include<math.h>
 #include<time.h>
 
-#include<stdio.h>
 main()
 {
-	int i, n;
-	char ci;
-	for (i = 1;; i++)
+	int n, i, m, j, k;
+	//printf('\n');
+	scanf("%d", &n);
+	j = 0, k = 0;
+	char h = '\n';
+	for (m = 2; m <= n; m++)
 	{
-		scanf("%c", &ci);
-		if (ci == 67 || ci == 99 || ci == 107 || ci == 75 || ci == 74 || ci == 106)
+		for (i = 2; i < m; i++)
 		{
-			switch (ci)
-			{
-			case 'K':;
-			case 'k':printf("KOREA WORLD CUP\n"); break;
-			case 'C':;
-			case 'c':printf("BEIJING OLYMPIC GAMES\n"); break;
-			case 'j':;
-			case 'J':printf("JAPAN WORLD CUP\n"); break;
-			}
+			if (m % i == 0)
+				k++;
 		}
-		else if (ci == '\n')
-			break;
-		else 
-			printf("%c\n", ci);
+		if (k != 0)
+			k = 0;
+		else
+		{
+			j++, printf("%5d", m);
+			if (j % 8 == 0)
+				printf("%c", h);
+		}
 	}
 }
 
+
+//int main()
+//{
+//	int a, num;
+//	for (a = 1; a < 6; a++)
+//	{
+//		num += a;
+//	}
+//	printf("%d", num);
+//	return 0;
+//}
 
 
 //int main()
