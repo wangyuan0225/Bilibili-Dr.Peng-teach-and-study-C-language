@@ -6,30 +6,133 @@
 #include<math.h>
 #include<time.h>
 
-main()
-{
-	int n, i, m, j, k;
-	//printf('\n');
-	scanf("%d", &n);
-	j = 0, k = 0;
-	char h = '\n';
-	for (m = 2; m <= n; m++)
-	{
-		for (i = 2; i < m; i++)
-		{
-			if (m % i == 0)
-				k++;
-		}
-		if (k != 0)
-			k = 0;
-		else
-		{
-			j++, printf("%5d", m);
-			if (j % 8 == 0)
-				printf("%c", h);
-		}
-	}
-}
+
+
+//int main() {
+//	int  n[2] = { 0 }, i, j, k = 2;
+//	for (i = 0; i < k; i++)
+//		for (j = 0; j < k; j++)
+//			n[j] = n[i] + 1;
+//	printf("%d\n", n[k]);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i = 0;
+//	double a, b, mid, y1, y2, y3;
+//	scanf("%lf,%lf", &a, &b);
+//	if (a > b)
+//		mid = a, a = b, b = mid;
+//	y1 = pow(a, 3) - pow(a, 2) + 6;
+//	y2 = pow(b, 3) - pow(b, 2) + 6;
+//	if (y1 * y2 > 0)
+//		printf(" no answer ");
+//	if (y1 == 0)
+//		printf("%f", a);
+//	if (y2 == 0)
+//		printf("%f", b);
+//	if (y1 * y2 < 0) {
+//		while (1) {
+//			do {
+//				mid = (a + b) / 2;
+//				y3 = pow(mid, 3) - pow(mid, 2) + 6;
+//				if (y3 == 0)
+//					printf("%f", mid);
+//				if (y1 * y3 < 0) {
+//					b = mid, mid = (mid + a) / 2;
+//					y3 = pow(mid, 3) - pow(mid, 2) + 6;
+//					y1 = pow(a, 3) - pow(a, 2) + 6;
+//					y2 = pow(b, 3) - pow(b, 2) + 6;
+//					i++;
+//				}
+//				if (y2 * y3 < 0) {
+//					a = mid, mid = (mid + b) / 2;
+//					y3 = pow(mid, 3) - pow(mid, 2) + 6;
+//					y1 = pow(a, 3) - pow(a, 2) + 6;
+//					y2 = pow(b, 3) - pow(b, 2) + 6;
+//					i++;
+//				}
+//			} while (i != 20);
+//			printf("%.16lf", mid);
+//			break;
+//		}
+//	}
+//}
+
+
+//int main()
+//{
+//	int a[10][10]={0}, n, max, min, rmax, rmin, i, j, t;
+//	printf("请输入一个大于2且小于10的整数：");
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//			scanf("%d", &a[i][j]);
+//	}
+//	printf("原始矩阵为：\n");
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//			printf("%5d", a[i][j]);
+//		printf("\n");
+//	}
+//	max = min = a[0][0];
+//	for (i = 0; i < n; i++)
+//		for (j = 0; j < n; j++)
+//			if (max < a[i][j])
+//			{
+//				max = a[i][j];
+//				rmax = i;
+//			}
+//			else if (min > a[i][j])
+//			{
+//				min = a[i][j];
+//				rmin = i;
+//			}
+//	for (j = 0; j < n; j++)
+//	{
+//		t = a[rmax][j];
+//		a[rmax][j] = a[rmin][j];
+//		a[rmin][j] = t;
+//	}
+//	printf("对调后的矩阵为: \n");
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//			printf("%5d", a[i][j]);
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+//main()
+//{
+//	int n, i, m, j, k;
+//	//printf('\n');
+//	scanf("%d", &n);
+//	j = 0, k = 0;
+//	char h = '\n';
+//	for (m = 2; m <= n; m++)
+//	{
+//		for (i = 2; i < m; i++)
+//		{
+//			if (m % i == 0)
+//				k++;
+//		}
+//		if (k != 0)
+//			k = 0;
+//		else
+//		{
+//			j++, printf("%5d", m);
+//			if (j % 8 == 0)
+//				printf("%c", h);
+//		}
+//	}
+//}
 
 
 //int main()
