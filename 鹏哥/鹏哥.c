@@ -7,6 +7,15 @@
 #include<time.h>
 
 
+int main() {
+	int file = 0;
+	int main = 1;
+	int Main = 1;
+	int PRINTF = 2;
+	printf("%d %d", Main, PRINTF);
+}
+
+
 
 //int main() {
 //	int  n[2] = { 0 }, i, j, k = 2;
