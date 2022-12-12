@@ -7,13 +7,30 @@
 #include<time.h>
 
 
-int main() {
-	int file = 0;
-	int main = 1;
-	int Main = 1;
-	int PRINTF = 2;
-	printf("%d %d", Main, PRINTF);
+typedef union {
+	long i;
+	int k[5];
+	char c;
+} DATE;
+
+struct date {
+	int cat;
+	DATE cow;
+	double dog;
+} too;
+DATE max;
+
+int main(){
+	printf("%d\n", sizeof(struct date) + sizeof(max));
 }
+
+
+//int main() {
+//	int file = 0;
+//	int Main = 1;
+//	int PRINTF = 2;
+//	printf("%d %d", Main, PRINTF);
+//}
 
 
 
