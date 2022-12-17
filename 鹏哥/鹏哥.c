@@ -7,22 +7,39 @@
 #include<time.h>
 
 
-typedef union {
-	long i;
-	int k[5];
-	char c;
-} DATE;
+#include <stdio.h>
 
-struct date {
-	int cat;
-	DATE cow;
-	double dog;
-} too;
-DATE max;
-
-int main(){
-	printf("%d\n", sizeof(struct date) + sizeof(max));
+int main() {
+	FILE* fp;
+	int i, k = 0, n = 0;
+	fp = fopen("d1.dat", "w");
+		for (i = 1; i < 4; i++)
+			fprintf(fp, " %d", i);
+	fclose(fp);
+	fp = fopen("d1.dat", "r");
+	fscanf(fp, " % d % d", &k, &n);
+	printf(" % d, % d\n", k, n);
+	fclose(fp);
+	return 0;
 }
+
+
+//typedef union {
+//	long i;
+//	int k[5];
+//	char c;
+//} DATE;
+//
+//struct date {
+//	int cat;
+//	DATE cow;
+//	double dog;
+//} too;
+//DATE max;
+//
+//int main(){
+//	printf("%d\n", sizeof(struct date) + sizeof(max));
+//}
 
 
 //int main() {
