@@ -7,21 +7,32 @@
 #include<time.h>
 
 
-#include <stdio.h>
-
 int main() {
-	FILE* fp;
-	int i, k = 0, n = 0;
-	fp = fopen("d1.dat", "w");
-		for (i = 1; i < 4; i++)
-			fprintf(fp, " %d", i);
-	fclose(fp);
-	fp = fopen("d1.dat", "r");
-	fscanf(fp, " % d % d", &k, &n);
-	printf(" % d, % d\n", k, n);
-	fclose(fp);
+	int x, y;
+	for (x = 0; x < 20; x++) {
+		for (y = 0; y < 33; y++) {
+			if ((x + y + 3 * (100 - 5 * x - 3 * y)) == 100) {
+				printf("高档%d件，中档%d件，低档%d件\n", x, y, 3*(100 - 5 * x - 3 * y));
+			}
+		}
+	}
 	return 0;
 }
+
+
+//int main() {
+//	FILE* fp;
+//	int i, k = 0, n = 0;
+//	fp = fopen("d1.dat", "w");
+//		for (i = 1; i < 4; i++)
+//			fprintf(fp, " %d", i);
+//	fclose(fp);
+//	fp = fopen("d1.dat", "r");
+//	fscanf(fp, " % d % d", &k, &n);
+//	printf(" % d, % d\n", k, n);
+//	fclose(fp);
+//	return 0;
+//}
 
 
 //typedef union {
